@@ -12,7 +12,10 @@ from typing import Any
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 
-from .analyzer import AIReportAnalyzer
+try:
+    from .analyzer import AIReportAnalyzer
+except ImportError:
+    from analyzer import AIReportAnalyzer
 
 app = Flask(__name__)
 CORS(app)
