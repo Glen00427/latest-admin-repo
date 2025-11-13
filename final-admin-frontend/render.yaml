@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: traffic-forecast-admin
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      cd src && npm install && npm run build
+    startCommand: gunicorn server.app:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
