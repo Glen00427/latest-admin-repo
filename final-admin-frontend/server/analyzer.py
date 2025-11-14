@@ -1,8 +1,7 @@
 """Heuristic AI report analysis engine for the admin dashboard.
 
-This module keeps all logic inside the admin-frontend workspace so the
-feature can run independently of the driver-facing backend.  It exposes
-``AIReportAnalyzer`` which ingests an incident payload and returns
+This module keeps all logic inside the admin-frontend workspace.  
+It exposes AIReportAnalyzer which ingests an incident payload and returns
 structured findings that the React ``AIAnalysisModal`` can render.
 """
 from __future__ import annotations
